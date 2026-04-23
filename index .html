@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-
+ 
 :root {
   --amber:        #C4832A;
   --amber-light:  #D9973E;
@@ -28,7 +28,7 @@
   --radius:       16px;
   --radius-sm:    10px;
 }
-
+ 
 html, body {
   min-height: 100%;
   min-height: 100dvh;
@@ -38,14 +38,14 @@ html, body {
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
 }
-
+ 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
 }
-
+ 
 /* ── APP WRAPPER ───────────────────────────── */
 .app {
   width: 100%;
@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   position: relative;
 }
-
+ 
 /* Ambient glow behind logo */
 .app::before {
   content: '';
@@ -68,7 +68,7 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-
+ 
 /* ── HEADER ────────────────────────────────── */
 .header {
   padding: 52px 28px 28px;
@@ -77,7 +77,7 @@ body {
   z-index: 1;
   flex-shrink: 0;
 }
-
+ 
 .logo-ring {
   width: 96px; height: 96px;
   border-radius: 50%;
@@ -91,7 +91,7 @@ body {
   object-fit: contain;
   filter: brightness(0.3) sepia(1) saturate(3) hue-rotate(5deg);
 }
-
+ 
 .brand-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 28px; font-weight: 600;
@@ -110,7 +110,7 @@ body {
   background: linear-gradient(90deg, transparent, rgba(196,131,42,0.4), transparent);
   margin: 18px auto 0;
 }
-
+ 
 /* ── SCREEN AREA ───────────────────────────── */
 .screen-wrap {
   flex: 1;
@@ -118,7 +118,7 @@ body {
   position: relative;
   z-index: 1;
 }
-
+ 
 .screen { display: none; flex-direction: column; }
 .screen.active {
   display: flex;
@@ -128,7 +128,7 @@ body {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
+ 
 /* ── STEP DOTS ─────────────────────────────── */
 .steps {
   display: flex; align-items: center; justify-content: center;
@@ -142,7 +142,7 @@ body {
 .step-dot.active {
   background: var(--amber); width: 22px; border-radius: 4px;
 }
-
+ 
 /* ── CARD ──────────────────────────────────── */
 .card {
   background: var(--surface);
@@ -151,7 +151,7 @@ body {
   padding: 24px;
   margin-bottom: 14px;
 }
-
+ 
 .card-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px; font-weight: 600;
@@ -161,7 +161,7 @@ body {
 .card-subtitle {
   font-size: 13px; color: var(--text-muted); line-height: 1.55;
 }
-
+ 
 /* ── INPUT ─────────────────────────────────── */
 .input-group { margin-top: 20px; }
 .input-label {
@@ -169,7 +169,7 @@ body {
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--text-muted); display: block; margin-bottom: 10px;
 }
-
+ 
 .phone-row {
   display: flex; align-items: stretch;
   background: var(--dark-3);
@@ -199,7 +199,7 @@ body {
   min-width: 0;
 }
 .phone-input::placeholder { color: var(--text-dim); font-size: 15px; }
-
+ 
 /* ── BUTTONS ───────────────────────────────── */
 .btn-primary {
   width: 100%; height: 56px;
@@ -216,7 +216,7 @@ body {
 }
 .btn-primary:active { transform: scale(0.975); background: var(--amber-light); }
 .btn-primary:disabled { background: var(--dark-3); color: var(--text-dim); cursor: not-allowed; }
-
+ 
 .btn-outline {
   width: 100%; height: 50px;
   background: transparent;
@@ -229,7 +229,7 @@ body {
   touch-action: manipulation;
 }
 .btn-outline:active { border-color: var(--amber); color: var(--amber); }
-
+ 
 /* ── SPINNER ───────────────────────────────── */
 .spinner {
   width: 20px; height: 20px;
@@ -239,7 +239,7 @@ body {
   animation: spin 0.7s linear infinite; display: none;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
 /* ── ERROR ─────────────────────────────────── */
 .error-msg {
   font-size: 13px; color: #D06050;
@@ -249,14 +249,14 @@ body {
   display: none; line-height: 1.4;
 }
 .error-msg.show { display: block; }
-
+ 
 /* ── PRIVACY NOTE ──────────────────────────── */
 .privacy-note {
   font-size: 12px; color: var(--text-dim);
   text-align: center; line-height: 1.6;
   margin-top: 18px;
 }
-
+ 
 /* ── ORDER CARDS ───────────────────────────── */
 .order-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -285,14 +285,14 @@ body {
   background: var(--amber);
   border-radius: var(--radius) var(--radius) 0 0;
 }
-
+ 
 .order-icon {
   width: 54px; height: 54px; border-radius: 50%;
   background: rgba(196,131,42,0.08);
   display: flex; align-items: center; justify-content: center;
 }
 .order-icon svg { width: 30px; height: 30px; }
-
+ 
 .order-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 19px; font-weight: 600; color: var(--text);
@@ -304,7 +304,7 @@ body {
   background: rgba(196,131,42,0.12);
   padding: 3px 10px; border-radius: 20px;
 }
-
+ 
 /* ── SUCCESS SCREEN ────────────────────────── */
 .success-check {
   width: 70px; height: 70px; border-radius: 50%;
@@ -314,7 +314,7 @@ body {
   margin: 0 auto 20px;
 }
 .success-check svg { width: 30px; height: 30px; }
-
+ 
 .message-card {
   background: var(--dark-3);
   border-left: 3px solid var(--amber);
@@ -326,7 +326,7 @@ body {
   font-size: 18px; font-weight: 500; font-style: italic;
   color: var(--text); line-height: 1.55;
 }
-
+ 
 .stats-row {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
   gap: 10px; margin-bottom: 12px;
@@ -347,7 +347,7 @@ body {
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text-dim); margin-top: 4px;
 }
-
+ 
 .pts-banner {
   background: var(--dark-3);
   border: 1px solid rgba(196,131,42,0.18);
@@ -371,7 +371,7 @@ body {
   font-size: 12px; color: var(--text-muted);
   letter-spacing: 0.04em; margin-top: 2px;
 }
-
+ 
 /* ── FOOTER ────────────────────────────────── */
 .footer {
   text-align: center;
@@ -387,7 +387,7 @@ body {
   font-size: 10px; letter-spacing: 0.14em;
   color: var(--text-dim); text-transform: uppercase;
 }
-
+ 
 /* ── CONFETTI ──────────────────────────────── */
 .confetti-wrap {
   position: fixed; top: 0; left: 0;
@@ -407,7 +407,7 @@ body {
 </head>
 <body>
 <div class="app">
-
+ 
   <!-- HEADER -->
   <div class="header">
     <div class="logo-ring">
@@ -429,10 +429,10 @@ body {
     <div class="brand-sub">Loyalty Programme</div>
     <div class="divider"></div>
   </div>
-
+ 
   <!-- SCREEN AREA -->
   <div class="screen-wrap">
-
+ 
     <!-- SCREEN 1: PHONE -->
     <div class="screen active" id="screen-phone">
       <div class="steps">
@@ -440,11 +440,11 @@ body {
         <div class="step-dot"></div>
         <div class="step-dot"></div>
       </div>
-
+ 
       <div class="card">
         <div class="card-title">Welcome</div>
         <div class="card-subtitle">Enter your phone number to track your visits and earn rewards.</div>
-
+ 
         <div class="input-group">
           <label class="input-label" for="phone">Phone Number</label>
           <div class="phone-row">
@@ -458,18 +458,18 @@ body {
           </div>
           <div class="error-msg" id="phone-error"></div>
         </div>
-
+ 
         <button class="btn-primary" id="btn-phone" onclick="handlePhone()">
           <span id="btn-phone-text">Continue</span>
           <div class="spinner" id="btn-phone-spinner"></div>
         </button>
       </div>
-
+ 
       <div class="privacy-note">
         Your number is only used for loyalty tracking.<br>We never share your data.
       </div>
     </div>
-
+ 
     <!-- SCREEN 2: ORDER -->
     <div class="screen" id="screen-order">
       <div class="steps">
@@ -477,11 +477,11 @@ body {
         <div class="step-dot active"></div>
         <div class="step-dot"></div>
       </div>
-
+ 
       <div class="card">
         <div class="card-title">What did you order?</div>
         <div class="card-subtitle">Select your purchase to earn points for this visit.</div>
-
+ 
         <div class="order-grid">
           <div class="order-card" id="card-coffee" onclick="selectOrder('coffee')">
             <div class="order-icon">
@@ -496,7 +496,7 @@ body {
             <div class="order-name">Coffee</div>
             <div class="order-pts">+10 pts</div>
           </div>
-
+ 
           <div class="order-card" id="card-snack" onclick="selectOrder('snack')">
             <div class="order-icon">
               <svg viewBox="0 0 32 32" fill="none">
@@ -509,9 +509,9 @@ body {
             <div class="order-pts">+5 pts</div>
           </div>
         </div>
-
+ 
         <div class="error-msg" id="order-error">Please select what you purchased.</div>
-
+ 
         <button class="btn-primary" id="btn-order" onclick="handleOrder()" style="margin-top:20px;">
           <span id="btn-order-text">Confirm Order</span>
           <div class="spinner" id="btn-order-spinner"></div>
@@ -519,7 +519,7 @@ body {
         <button class="btn-outline" onclick="goBack()">← Change Phone Number</button>
       </div>
     </div>
-
+ 
     <!-- SCREEN 3: SUCCESS -->
     <div class="screen" id="screen-success">
       <div class="steps">
@@ -527,18 +527,18 @@ body {
         <div class="step-dot"></div>
         <div class="step-dot active"></div>
       </div>
-
+ 
       <div class="card">
         <div class="success-check">
           <svg viewBox="0 0 30 30" fill="none">
             <path d="M5 15l6.5 6.5L25 8" stroke="#C4832A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-
+ 
         <div class="message-card">
           <div class="message-text" id="visit-message">Welcome to Blooming Café!</div>
         </div>
-
+ 
         <div class="stats-row">
           <div class="stat-box">
             <div class="stat-val" id="stat-visit">1</div>
@@ -553,7 +553,7 @@ body {
             <div class="stat-lbl">Total pts</div>
           </div>
         </div>
-
+ 
         <div class="pts-banner">
           <div class="pts-star">
             <svg viewBox="0 0 22 22" fill="none">
@@ -567,45 +567,45 @@ body {
           </div>
         </div>
       </div>
-
+ 
       <button class="btn-primary" onclick="resetApp()">Done</button>
     </div>
-
+ 
     <!-- FOOTER -->
     <div class="footer">
       <div class="footer-line"></div>
       <div class="footer-text">Blooming Café · Kigali, Rwanda</div>
     </div>
-
+ 
   </div><!-- /screen-wrap -->
 </div><!-- /app -->
-
+ 
 <div class="confetti-wrap" id="confetti"></div>
-
+ 
 <script>
 const APPS_SCRIPT_URL = 'YOUR_DEPLOYED_GOOGLE_APPS_SCRIPT_URL_HERE';
-
+ 
 let currentPhone = '';
 let currentOrder = '';
-
+ 
 document.getElementById('phone').addEventListener('keydown', e => {
   if (e.key === 'Enter') handlePhone();
 });
-
+ 
 async function handlePhone() {
   const raw = document.getElementById('phone').value.trim().replace(/\s/g, '');
   const err = document.getElementById('phone-error');
   err.classList.remove('show');
-
+ 
   if (!raw || raw.length < 9 || !/^\d+$/.test(raw)) {
     err.textContent = 'Please enter a valid 9-digit phone number.';
     err.classList.add('show');
     return;
   }
-
+ 
   currentPhone = '+250' + raw.replace(/^0+/, '');
   setLoading('phone', true);
-
+ 
   try {
     const res = await fetch(`${APPS_SCRIPT_URL}?action=checkPhone&phone=${encodeURIComponent(currentPhone)}`);
     const data = await res.json();
@@ -621,21 +621,21 @@ async function handlePhone() {
     setLoading('phone', false);
   }
 }
-
+ 
 function selectOrder(type) {
   currentOrder = type;
   document.getElementById('card-coffee').classList.toggle('selected', type === 'coffee');
   document.getElementById('card-snack').classList.toggle('selected', type === 'snack');
   document.getElementById('order-error').classList.remove('show');
 }
-
+ 
 async function handleOrder() {
   if (!currentOrder) {
     document.getElementById('order-error').classList.add('show');
     return;
   }
   setLoading('order', true);
-
+ 
   try {
     const res = await fetch(`${APPS_SCRIPT_URL}?action=logVisit&phone=${encodeURIComponent(currentPhone)}&order=${currentOrder}`);
     const data = await res.json();
@@ -657,7 +657,7 @@ async function handleOrder() {
     setLoading('order', false);
   }
 }
-
+ 
 function resetApp() {
   currentPhone = ''; currentOrder = '';
   document.getElementById('phone').value = '';
@@ -666,26 +666,26 @@ function resetApp() {
   document.getElementById('card-snack').classList.remove('selected');
   showScreen('screen-phone');
 }
-
+ 
 function goBack() {
   currentOrder = '';
   document.getElementById('card-coffee').classList.remove('selected');
   document.getElementById('card-snack').classList.remove('selected');
   showScreen('screen-phone');
 }
-
+ 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
+ 
 function setLoading(btn, on) {
   document.getElementById('btn-' + btn).disabled = on;
   document.getElementById('btn-' + btn + '-text').style.display = on ? 'none' : 'block';
   document.getElementById('btn-' + btn + '-spinner').style.display = on ? 'block' : 'none';
 }
-
+ 
 function launchConfetti() {
   const wrap = document.getElementById('confetti');
   wrap.innerHTML = '';
